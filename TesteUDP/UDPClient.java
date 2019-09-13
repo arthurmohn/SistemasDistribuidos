@@ -1,10 +1,12 @@
 package TesteUDP;
 
+
 import java.net.*;
 import java.io.*;
 
 public class UDPClient {
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
 
         DatagramSocket aSocket = null;
         try {
@@ -18,7 +20,7 @@ public class UDPClient {
             byte[] buffer = new byte[100];
             DatagramPacket resposta = new DatagramPacket(buffer, buffer.length);
             aSocket.receive(resposta);
-            System.out.println("Resposta: " + new String(resposta.getData()));
+            System.out.println("Resposta do Servidor: " + new String(resposta.getData()));
 
         } catch (SocketException e) {
             System.out.println("Socket: " + e.getMessage());
