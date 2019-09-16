@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class Mensagem implements Serializable {
-        TipoOperacao op;
-        BigDecimal[] parametros;
+    private TipoOperacao op;
+    private BigDecimal[] parametros;
 
 
     public Mensagem(TipoOperacao op, BigDecimal[] parametros) {
